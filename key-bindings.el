@@ -3,6 +3,10 @@
 ;; Key bindings.
 ;;
 
+;; ----------------------------------------------------------------------------
+;; Key bindings related to default Emacs functions.
+;; ----------------------------------------------------------------------------
+
 ;; Quit emacs: C-x r q (Really Quit)
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 
@@ -32,6 +36,16 @@
 
 ;; Sort lines: M-s l
 (global-set-key (kbd "M-s l") 'sort-lines)
+
+;; ----------------------------------------------------------------------------
+;; Key bindings related to extensions.
+;; ----------------------------------------------------------------------------
+
+;; browse-kill-ring: C-x C-y
+(global-set-key (kbd "C-x C-y") 'browse-kill-ring)
+
+;; expand-region: C-'
+(global-set-key (kbd "C-'") 'er/expand-region)
 
 (provide 'key-bindings)
 

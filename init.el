@@ -59,5 +59,12 @@
 ;; General configuration.
 (require 'general-configurations)
 
+;; Key bindings.
+(require 'key-bindings)
+
+;; Extensions.
+(require 'browse-kill-ring)
+(require 'expand-region)
+
 ;; Setups.
 (require 'setup-ediff)
