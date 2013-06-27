@@ -47,5 +47,16 @@
 ;; expand-region: C-'
 (global-set-key (kbd "C-'") 'er/expand-region)
 
-(provide 'key-bindings)
+;; multiple-cursors
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-æ") 'mc/mark-all-like-this-dwim)
+(global-set-key (kbd "C-ß") 'mc/mark-all-in-region)
+(global-set-key (kbd "C-s->") 'mc/mark-next-word-like-this)
+(global-set-key (kbd "C-s-<") 'mc/mark-previous-word-like-this)
+(global-set-key (kbd "C-s-æ") 'mc/mark-all-words-like-this)
+(global-set-key (kbd "s->") 'mc/mark-next-symbol-like-this)
+(global-set-key (kbd "s-<") 'mc/mark-previous-symbol-like-this)
+(global-set-key (kbd "s-æ") 'mc/mark-all-symbols-like-this)
 
+(provide 'key-bindings)

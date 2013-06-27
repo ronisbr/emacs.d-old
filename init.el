@@ -65,6 +65,7 @@
 ;; Extensions.
 (require 'browse-kill-ring)
 (require 'expand-region)
+(require 'multiple-cursors)
 
 ;; Setups.
 (require 'setup-ediff)
