@@ -1,4 +1,4 @@
-;; Author: Ronan Arraes Jardim Chagas
+;; Author: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
 ;;
 ;; Setup ido (Interactively Do Things)
 
