@@ -71,6 +71,7 @@
 (require 'smart-forward)
 
 ;; Setups.
+(require 'setup-auto-complete)
 (require 'setup-ediff)
 (eval-after-load 'ido '(require 'setup-ido))
 (require 'setup-magit)
