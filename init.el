@@ -70,3 +70,4 @@
 
 ;; Setups.
 (require 'setup-ediff)
+(require 'setup-smex)
