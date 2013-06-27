@@ -66,6 +66,7 @@
 (require 'browse-kill-ring)
 (require 'expand-region)
 (require 'multiple-cursors)
+(require 'smart-forward)
 
 ;; Setups.
 (require 'setup-ediff)

@@ -59,4 +59,10 @@
 (global-set-key (kbd "s-<") 'mc/mark-previous-symbol-like-this)
 (global-set-key (kbd "s-æ") 'mc/mark-all-symbols-like-this)
 
+;; smart-forward
+(global-set-key (kbd "M-<up>") 'smart-up)
+(global-set-key (kbd "M-<down>") 'smart-down)
+(global-set-key (kbd "M-<left>") 'smart-backward)
+(global-set-key (kbd "M-<right>") 'smart-forward)
+
 (provide 'key-bindings)
