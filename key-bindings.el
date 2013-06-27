@@ -50,6 +50,10 @@
 ;; helm
 (global-set-key (kbd "<f6>") 'helm-mini)
 
+;; magit
+(global-set-key (kbd "C-x m") 'magit-status)
+(autoload 'magit-status "magit")
+
 ;; move-text
 (global-set-key (kbd "<C-S-down>") 'move-text-down)
 (global-set-key (kbd "<C-S-up>") 'move-text-up)

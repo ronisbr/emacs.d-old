@@ -16,3 +16,9 @@
 [submodule "site-lisp/helm"]
 	path = site-lisp/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "site-lisp/magit"]
+	path = site-lisp/magit
+	url = https://github.com/magit/magit.git
+[submodule "site-lisp/git-modes"]
+	path = site-lisp/git-modes
+	url = https://github.com/lunaryorn/git-modes.git

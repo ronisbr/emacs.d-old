@@ -72,4 +72,5 @@
 
 ;; Setups.
 (require 'setup-ediff)
+(require 'setup-magit)
 (require 'setup-smex)
