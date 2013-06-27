@@ -53,6 +53,11 @@
 ;; Make backups of files, even when they're in version control.
 (setq vc-make-backup-files t)
 
-;; Setup appearance
+;; Setup appearance.
 (require 'setup-appearance)
 
+;; General configuration.
+(require 'general-configurations)
+
+;; Setups.
+(require 'setup-ediff)
