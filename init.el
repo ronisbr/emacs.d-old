@@ -65,6 +65,8 @@
 ;; Extensions.
 (require 'browse-kill-ring)
 (require 'expand-region)
+(require 'helm-config)
+(require 'move-text)
 (require 'multiple-cursors)
 (require 'smart-forward)
 

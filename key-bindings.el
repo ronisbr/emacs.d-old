@@ -47,6 +47,13 @@
 ;; expand-region: C-'
 (global-set-key (kbd "C-'") 'er/expand-region)
 
+;; helm
+(global-set-key (kbd "<f6>") 'helm-mini)
+
+;; move-text
+(global-set-key (kbd "<C-S-down>") 'move-text-down)
+(global-set-key (kbd "<C-S-up>") 'move-text-up)
+
 ;; multiple-cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
