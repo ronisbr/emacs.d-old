@@ -22,3 +22,6 @@
 [submodule "site-lisp/git-modes"]
 	path = site-lisp/git-modes
 	url = https://github.com/lunaryorn/git-modes.git
+[submodule "site-lisp/ido-ubiquitous"]
+	path = site-lisp/ido-ubiquitous
+	url = https://github.com/technomancy/ido-ubiquitous.git

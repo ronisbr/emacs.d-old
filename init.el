@@ -72,5 +72,6 @@
 
 ;; Setups.
 (require 'setup-ediff)
+(eval-after-load 'ido '(require 'setup-ido))
 (require 'setup-magit)
 (require 'setup-smex)
