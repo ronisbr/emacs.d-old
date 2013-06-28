@@ -40,7 +40,7 @@
 ;; ----------------------------------------------------------------------------
 
 ;; Only start server for okular communication when in latex mode.
-(add-hook 'LaTeX-mode-hook 'server-start)
+;(add-hook 'LaTeX-mode-hook 'server-start)
 
 ;; Enable synctex correlation.
 (setq TeX-source-correlate-method 'synctex)
