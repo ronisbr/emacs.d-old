@@ -53,8 +53,17 @@
 ;; Make backups of files, even when they're in version control.
 (setq vc-make-backup-files t)
 
+;; Functions (load all files in userdef-funcs-dir)
+(setq userdef-funcs-dir (expand-file-name "userdef-funcs" user-emacs-directory))
+(dolist (file (directory-files userdef-funcs-dir t "\\w+"))
+  (when (file-regular-p file)
+    (load file)))
+
 ;; Setup appearance.
 (require 'setup-appearance)
+
+;; misc.el
+(require 'misc)
 
 ;; General configuration.
 (require 'general-configurations)

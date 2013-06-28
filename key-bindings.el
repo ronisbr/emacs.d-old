@@ -16,6 +16,9 @@
 ;; Back to indentation: M-i
 (global-set-key (kbd "M-i") 'back-to-indentation)
 
+;; Copy from above: s-.
+(global-set-key (kbd "s-.") 'copy-from-above-command)
+
 ;; Shell: C-z
 (global-set-key (kbd "C-z") 'shell)
 
@@ -81,5 +84,34 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; Old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; Zap to char
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-set-key (kbd "s-z") (lambda (char) (interactive "cZap up to char backwards: ") (zap-up-to-char -1 char)))
+(global-set-key (kbd "M-Z") 'zap-to-char)
+(global-set-key (kbd "s-Z") (lambda (char) (interactive "cZap to char backwards: ") (zap-to-char -1 char)))
+
+;; ----------------------------------------------------------------------------
+;; Key bindings related to user-defined functions.
+;; ----------------------------------------------------------------------------
+
+;; Duplicate region
+(global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
+
+;; Increase number at point.
+(global-set-key (kbd "C-+") 'esk-increment-integer-at-point)
+;; Decrease number at point.
+(global-set-key (kbd "C-_") 'esk-decrement-integer-at-point)
+
+;; Killing text.
+(global-set-key (kbd "C-S-k") 'kill-and-retry-line)
+(global-set-key (kbd "C-w") 'kill-region-or-backward-word)
+(global-set-key (kbd "C-S-w") 'kill-to-beginning-of-line)
+;; Use M-w for copy-line if no active region.
+(global-set-key (kbd "M-w") 'save-region-or-current-line)
+(global-set-key (kbd "M-W") '(lambda () (interactive) (save-region-or-current-line 1)))
+
+;; Toggle two most recent buffers.
+(global-set-key (kbd "s-j") 'quick-switch-buffer)
 
 (provide 'key-bindings)
