@@ -1,0 +1,5 @@
+# Emacs Lisp Byte-compiled Source Code file #
+#############################################
+
+*.elc
+
