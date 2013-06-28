@@ -10,6 +10,9 @@
 ;; Quit emacs: C-x r q (Really Quit)
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 
+;; Do not exit emacs with C-x C-c
+(global-unset-key (kbd "C-x C-c"))
+
 ;; Delete blank lines: C-c C-<return>
 (global-set-key (kbd "C-c C-<return>") 'delete-blank-lines)
 
@@ -39,6 +42,9 @@
 
 ;; Sort lines: M-s l
 (global-set-key (kbd "M-s l") 'sort-lines)
+
+;; AUCTeX TeX-complete-symbol: C-tab
+(global-set-key (kbd "C-<tab>") 'TeX-complete-symbol)
 
 ;; ----------------------------------------------------------------------------
 ;; Key bindings related to extensions.
