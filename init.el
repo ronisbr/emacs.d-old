@@ -83,6 +83,7 @@
 (require 'setup-auctex)
 (require 'setup-auto-complete)
 (require 'setup-ediff)
+(require 'setup-flyspell)
 (eval-after-load 'ido '(require 'setup-ido))
 (require 'setup-magit)
 (require 'setup-smex)
