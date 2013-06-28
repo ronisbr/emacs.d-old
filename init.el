@@ -76,3 +76,4 @@
 (eval-after-load 'ido '(require 'setup-ido))
 (require 'setup-magit)
 (require 'setup-smex)
+(require 'setup-yasnippet)

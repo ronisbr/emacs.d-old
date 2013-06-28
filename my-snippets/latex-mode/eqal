@@ -1,0 +1,9 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: Aligned equations
+# key: eqal
+# --
+\begin{equation}
+    \begin{aligned}
+        $0
+    \end{aligned}
+\end{equation}
