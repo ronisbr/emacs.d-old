@@ -21,8 +21,29 @@
 (set-default 'preview-scale-function 1.1)
 
 ;; Set default pdf viewer.
+;;
+;; Modified from:
+;; https://bugs.kde.org/show_bug.cgi?id=274294#c20
+;;
+
+(add-hook 'LaTeX-mode-hook '(lambda ()
+    (add-to-list 'TeX-expand-list 
+        '("%u" Okular-make-url))))
+
+(defun Okular-make-url () (concat
+    "file://\"" 
+    (expand-file-name (funcall file (TeX-output-extension) t)
+        (file-name-directory (TeX-master-file))) 
+    "\"#src:"
+    (TeX-current-line)
+    "\""
+    (expand-file-name (TeX-master-directory)) 
+    (TeX-current-file-name-master-relative)
+    "\""))
+
 (setq TeX-view-program-list
-      '(("Okular" "okular --unique %o#src:%n%b")))
+      '(("Okular" "okular --unique %u")))
+
 (setq TeX-view-program-selection '((output-pdf "Okular")))
 
 ;; ----------------------------------------------------------------------------
