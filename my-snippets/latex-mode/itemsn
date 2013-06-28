@@ -1,7 +1,8 @@
 # contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
 # name: Itemize
-# key: item
+# expand-env: ((yas/indent-line 'fixed))
+# key: itemsn
 # --
 \begin{itemize}
-    \item $0
+  \item $0
 \end{itemize}

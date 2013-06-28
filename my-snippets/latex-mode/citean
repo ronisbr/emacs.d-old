@@ -2,4 +2,4 @@
 # name: \citeasnoun{...}
 # key: citean
 # --
-\citeasnoun{$0}
+\citeasnoun{$1}$0

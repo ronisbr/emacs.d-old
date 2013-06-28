@@ -2,4 +2,4 @@
 # name: \mathbf{...}
 # key: mbf
 # --
-\mathbf{$0}
+\mathbf{$1}$0

@@ -2,4 +2,4 @@
 # name: \subsubsection{...}
 # key: sssec
 # --
-\subsubsection{$0}
+\subsubsection{$1}$0

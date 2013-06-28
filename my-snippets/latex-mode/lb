@@ -2,4 +2,4 @@
 # name: \label{...}
 # key: lb
 # --
-\label{$0}
+\label{$1}$0

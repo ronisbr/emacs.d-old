@@ -2,4 +2,4 @@
 # name: \chapter{...}
 # key: chp
 # --
-\chapter{$0}
+\chapter{$1}$0

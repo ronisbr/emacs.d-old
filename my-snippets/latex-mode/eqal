@@ -3,8 +3,8 @@
 # key: eqal
 # --
 \begin{equation}
-    \begin{aligned}
-        $0
-    \end{aligned}
+  \begin{aligned}
+    $0
+  \end{aligned}
 \end{equation}
 

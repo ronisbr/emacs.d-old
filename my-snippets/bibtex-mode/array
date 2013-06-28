@@ -1,0 +1,14 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: @ARTICLE
+# expand-env: ((yas/indent-line 'fixed))
+# key: article
+# --
+@ARTICLE{$1,
+  author = {$2},
+  title = {$3},
+  year = {$4},
+  journal = $5,
+  volume = {$6},
+  number = {$7},
+  pages = {$8},
+}$0

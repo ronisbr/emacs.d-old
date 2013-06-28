@@ -2,4 +2,4 @@
 # name: \section{...}
 # key: sec
 # --
-\section{$0}
+\section{$1}$0
