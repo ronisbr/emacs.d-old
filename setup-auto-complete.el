@@ -14,6 +14,7 @@
 
 (setq ac-auto-show-menu 0.6)
 
-;; (require 'auto-complete-auctex)
+;; Provide auto-completion with auctex.
+(require 'auto-complete-auctex)
 
 (provide 'setup-auto-complete)
