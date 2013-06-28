@@ -18,7 +18,7 @@
 (setq TeX-PDF-mode t)
 
 ;; Increase the font size of the preview.
-(set-default 'preview-scale-function 1.4)
+(set-default 'preview-scale-function 1.1)
 
 ;; Set default pdf viewer.
 (setq TeX-view-program-list
