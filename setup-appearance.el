@@ -7,14 +7,17 @@
 (set-default-font "Monaco 9")
 
 ;; Background and foreground color
-(set-background-color "black")
-(set-foreground-color "white")
+(setq default-frame-alist
+      '((background-color . "#191919")
+        (foreground-color . "#DFDFDF")
+        (font . "Monaco 9")
+	(menu)))
 
 ;; Highlight current line
 (global-hl-line-mode 1)
 
 ;; Customize background color of lighlighted line
-(set-face-background 'hl-line "#212121")
+(set-face-background 'hl-line "#444444")
 
 ;; Customize background color of selected region
 (set-face-background 'region "#000077")
@@ -32,9 +35,6 @@
 
 ;; Show line numbers
 (global-linum-mode 1)
-
-;; Remove the menu bar
-; (menu-bar-mode -1)
 
 ;; org-mode colors
 (setq org-todo-keyword-faces

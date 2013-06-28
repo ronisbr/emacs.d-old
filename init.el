@@ -6,7 +6,7 @@
 
 ;; Disable the tool bar and the scroll bar.
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+;;(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; Disable splash screen.
 (setq inhibit-startup-message t)
