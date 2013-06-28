@@ -11,7 +11,7 @@
       '((background-color . "#191919")
         (foreground-color . "#DFDFDF")
         (font . "Monaco 9")
-	(menu)))
+	(cursor-color . "#868686")))
 
 ;; Highlight current line
 (global-hl-line-mode 1)
@@ -20,12 +20,9 @@
 (set-face-background 'hl-line "#444444")
 
 ;; Customize background color of selected region
-(set-face-background 'region "#000077")
+(set-face-background 'region "#000045")
 
 (set-face-foreground 'font-lock-warning-face "#ff6666")
-
-;; Set cursor color
-(set-cursor-color "#414141")
 
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
