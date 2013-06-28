@@ -26,10 +26,10 @@
 (global-set-key (kbd "C-x M-z") 'suspend-frame)
 
 ;; Window move.
-(global-set-key (kbd "C-S-<left>")  'windmove-left)
-(global-set-key (kbd "C-S-<right>") 'windmove-right)
-(global-set-key (kbd "C-S-<up>")    'windmove-up)
-(global-set-key (kbd "C-S-<down>")  'windmove-down)
+(global-set-key (kbd "C-s-<left>")  'windmove-left)
+(global-set-key (kbd "C-s-<right>") 'windmove-right)
+(global-set-key (kbd "C-s-<up>")    'windmove-up)
+(global-set-key (kbd "C-s-<down>")  'windmove-down)
 
 ;; Webjump: search on google, wikipedia, emacs wiki, etc.: C-x g
 (global-set-key (kbd "C-x g") 'webjump)
