@@ -1,0 +1,5 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: \ref{...}
+# key: ref
+# --
+\ref{$0}

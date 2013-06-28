@@ -1,0 +1,5 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: \frac{...}{...}
+# key: frac
+# --
+\frac{$1}{$0}

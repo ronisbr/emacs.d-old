@@ -1,0 +1,5 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: Integral
+# key: int
+# --
+\int^{$1}_{$2} \! $3 \, \dif $0

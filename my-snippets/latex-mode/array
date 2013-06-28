@@ -1,0 +1,7 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: Array
+# key: array
+# --
+\begin{array}{$1}
+    $0
+\end{array}
