@@ -1,0 +1,5 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: \citeasnoun{...}
+# key: citean
+# --
+\citet{$1}$0
