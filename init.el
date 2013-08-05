@@ -86,5 +86,6 @@
 (require 'setup-flyspell)
 (eval-after-load 'ido '(require 'setup-ido))
 (require 'setup-magit)
+(require 'setup-matlab)
 (require 'setup-smex)
 (require 'setup-yasnippet)
