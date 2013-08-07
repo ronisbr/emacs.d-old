@@ -80,6 +80,7 @@
 (require 'smart-forward)
 
 ;; Setups.
+(require 'setup-ace-jump-mode)
 (require 'setup-auctex)
 (require 'setup-auto-complete)
 (require 'setup-ediff)
