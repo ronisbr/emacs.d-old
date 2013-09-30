@@ -1,0 +1,16 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: function
+# expand-env: ((yas/indent-line 'fixed))
+# key: function
+# --
+function $1 = $2($3)
+% $2 $4
+%
+% Inputs:
+%     $3
+%
+% Return:
+%     $1
+
+    $5
+end

@@ -1,0 +1,31 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: classdef
+# expand-env: ((yas/indent-line 'fixed))
+# key: classdef
+# --
+classdef class_$1 < handle
+% class_$1    Class $1.
+%
+% $2
+%
+% class_$1 properties:
+%
+% class_$1 methods:
+%     class_$1: Class constructor.
+
+    properties
+    end
+    
+    methods
+        function $1_obj = class_$1($3)
+        % class_$1    Class constructor.
+        %
+        % Inputs:
+        %     $3
+        %
+        % Return:
+        %     $1_obj: An instance of the class.
+            
+        end
+    end
+end

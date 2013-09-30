@@ -1,0 +1,18 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: Class function
+# expand-env: ((yas/indent-line 'fixed))
+# key: classfunc
+# --
+function $1 = $2(this, $3)
+% $2 $4
+%
+% Inputs:
+%     this: An instance of this class.
+%     $3
+%
+% Return:
+%     $1
+%
+
+    $5
+end
