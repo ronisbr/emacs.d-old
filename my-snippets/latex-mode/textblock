@@ -1,0 +1,8 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: Text Block
+# expand-env: ((yas/indent-line 'fixed))
+# key: textblock
+# --
+\begin{textblock}{$1}($2, $3)
+  $0
+\end{textblock}
