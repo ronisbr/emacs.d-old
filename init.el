@@ -83,6 +83,8 @@
 (require 'setup-ace-jump-mode)
 (require 'setup-auctex)
 (require 'setup-auto-complete)
+(require 'setup-cc-mode)
+(require 'setup-ecb)
 (require 'setup-ediff)
 (require 'setup-flyspell)
 (eval-after-load 'ido '(require 'setup-ido))
