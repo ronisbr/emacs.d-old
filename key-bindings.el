@@ -23,7 +23,7 @@
 (global-set-key (kbd "s-.") 'copy-from-above-command)
 
 ;; Shell: C-z
-(global-set-key (kbd "C-z") 'shell)
+(global-set-key (kbd "C-z") 'eshell)
 
 ;; Suspend frame: C-x M-z
 (global-set-key (kbd "C-x M-z") 'suspend-frame)
