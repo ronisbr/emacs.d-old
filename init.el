@@ -93,3 +93,20 @@
 (require 'setup-matlab)
 (require 'setup-smex)
 (require 'setup-yasnippet)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(LaTeX-command "latex -synctex=1")
+ '(ecb-layout-window-sizes (quote (("left8" (ecb-directories-buffer-name 0.21641791044776118 . 0.2923076923076923) (ecb-sources-buffer-name 0.21641791044776118 . 0.23076923076923078) (ecb-methods-buffer-name 0.21641791044776118 . 0.2923076923076923) (ecb-history-buffer-name 0.21641791044776118 . 0.16923076923076924)) ("left-analyse" (ecb-directories-buffer-name 0.20149253731343283 . 0.2923076923076923) (ecb-sources-buffer-name 0.20149253731343283 . 0.23076923076923078) (ecb-methods-buffer-name 0.20149253731343283 . 0.23076923076923078) (ecb-analyse-buffer-name 0.20149253731343283 . 0.23076923076923078)))))
+ '(ecb-options-version "2.40")
+ '(mark-even-if-inactive t)
+ '(scroll-bar-mode (quote right))
+ '(transient-mark-mode 1))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -1,0 +1,12 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: doc-func
+# expand-env: ((yas/indent-line 'fixed))
+# key: doc-func
+# --
+/**
+ * @brief $1
+ * @author $2
+ * @date `(format-time-string "%Y-%m-%d")`
+ *
+ * $0
+ */
