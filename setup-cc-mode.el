@@ -3,13 +3,15 @@
 ;; Setup CC mode
 ;;
 
-(setq c-default-style "linux"
-      c-basic-offset 4)
+;; My coding style.
+(c-add-style "my-coding-style"
+    '((c-offsets-alist . ((innamespace . 0)))))
 
-;; Set F9 key to compile the source code.
-(defun my/bindkey-recompile ()
-    "Bind <F9> to `recompile'."
-    (local-set-key (kbd "<f9>") 'recompile))
-(add-hook 'c-mode-common-hook 'my/bindkey-recompile)
+(add-hook 'c-mode-common-hook 
+    '(lambda ()
+        (setq c-default-sytle "linux"
+              c-basic-offset 4)
+        (local-set-key (kbd "<f9>") 'recompile)
+        (c-set-style "my-coding-style")))
 
 (provide 'setup-cc-mode)
