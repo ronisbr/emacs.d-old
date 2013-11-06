@@ -1,7 +1,7 @@
 # contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
-# name: doc-func
+# name: doc-func-ronan
 # expand-env: ((yas/indent-line 'fixed))
-# key: doc-func
+# key: doc-func-ronan
 # --
 /**
  * @brief $1
