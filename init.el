@@ -101,6 +101,17 @@
  '(LaTeX-command "latex -synctex=1")
  '(ecb-layout-window-sizes (quote (("left8" (ecb-directories-buffer-name 0.21641791044776118 . 0.2923076923076923) (ecb-sources-buffer-name 0.21641791044776118 . 0.23076923076923078) (ecb-methods-buffer-name 0.21641791044776118 . 0.2923076923076923) (ecb-history-buffer-name 0.21641791044776118 . 0.16923076923076924)) ("left-analyse" (ecb-directories-buffer-name 0.20149253731343283 . 0.2923076923076923) (ecb-sources-buffer-name 0.20149253731343283 . 0.23076923076923078) (ecb-methods-buffer-name 0.20149253731343283 . 0.23076923076923078) (ecb-analyse-buffer-name 0.20149253731343283 . 0.23076923076923078)))))
  '(ecb-options-version "2.40")
+ '(erc-away-timestamp-format "[%H:%M:%S] ")
+ '(erc-fill-column 80)
+ '(erc-fill-function (quote erc-fill-static))
+ '(erc-fill-static-center 15)
+ '(erc-insert-timestamp-function (quote erc-insert-timestamp-left-and-right))
+ '(erc-modules (quote (autojoin button completion fill irccontrols keep-place list match menu move-to-prompt netsplit networks noncommands readonly ring smiley stamp spelling track)))
+ '(erc-nick "Ronis_BR")
+ '(erc-nick-uniquifier "_")
+ '(erc-port 8001)
+ '(erc-server "chat.freenode.org")
+ '(erc-timestamp-right-column 82)
  '(mark-even-if-inactive t)
  '(scroll-bar-mode (quote right))
  '(transient-mark-mode 1))
@@ -109,4 +120,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(bg:erc-color-face1 ((t (:background "black"))))
+ '(erc-default-face ((t (:foreground "goldenrod"))))
+ '(erc-input-face ((t (:foreground "gray"))))
+ '(erc-my-nick-face ((t (:foreground "white smoke" :weight bold)))))
