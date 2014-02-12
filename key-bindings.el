@@ -22,8 +22,11 @@
 ;; Copy from above: s-.
 (global-set-key (kbd "s-.") 'copy-from-above-command)
 
-;; Shell: C-z
-(global-set-key (kbd "C-z") 'eshell)
+;; Multi-term
+(global-set-key (kbd "C-z") 'multi-term)
+(global-set-key (kbd "C-c C-z") 'multi-term-dedicated-open)
+(global-set-key (kbd "C-c C-s") 'multi-term-dedicated-select)
+(global-set-key (kbd "C-c C-a") 'multi-term-dedicated-close)
 
 ;; Suspend frame: C-x M-z
 (global-set-key (kbd "C-x M-z") 'suspend-frame)
