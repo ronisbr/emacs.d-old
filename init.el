@@ -72,7 +72,7 @@
 (require 'key-bindings)
 
 ;; Extensions.
-(require 'browse-kill-ring)
+(require 'ahei-misc)
 (require 'expand-region)
 (require 'helm-config)
 (require 'move-text)
@@ -83,6 +83,7 @@
 (require 'setup-ace-jump-mode)
 (require 'setup-auctex)
 (require 'setup-auto-complete)
+(require 'setup-browse-kill-ring)
 (require 'setup-cc-mode)
 (require 'setup-cedet)
 (require 'setup-ecb)
