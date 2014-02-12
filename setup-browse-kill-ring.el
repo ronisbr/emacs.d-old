@@ -13,7 +13,6 @@
   "settings for `browse-kill-ring'."
   
   (setq browse-kill-ring-maximum-display-length nil)
-  (setq browse-kill-ring-highlight-current-entry t)
   (setq browse-kill-ring-separator "------------------------------------------------------------")
   (setq browse-kill-ring-display-duplicates nil)
 
