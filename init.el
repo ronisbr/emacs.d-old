@@ -94,14 +94,16 @@
 (require 'setup-matlab)
 (require 'setup-multi-term)
 (require 'setup-smex)
+(require 'setup-sunrise-commander)
 (require 'setup-yasnippet)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40")
  '(LaTeX-command "latex -synctex=1")
+ '(delete-selection-mode nil)
+ '(ecb-options-version "2.40")
  '(erc-away-timestamp-format "[%H:%M:%S] ")
  '(erc-fill-column 80)
  '(erc-fill-function (quote erc-fill-static))
@@ -124,4 +126,9 @@
  '(bg:erc-color-face1 ((t (:background "black"))))
  '(erc-default-face ((t (:foreground "goldenrod"))))
  '(erc-input-face ((t (:foreground "gray"))))
- '(erc-my-nick-face ((t (:foreground "white smoke" :weight bold)))))
+ '(erc-my-nick-face ((t (:foreground "white smoke" :weight bold))))
+ '(sr-active-path-face ((t (:foreground "yellow" :weight bold :height 120))))
+ '(sr-highlight-path-face ((t (:foreground "#ace6ac" :weight bold :height 120))))
+ '(sr-passive-path-face ((t (:foreground "lightgray" :weight bold :height 120))))
+ '(sr-tabs-active-face ((t (:inherit variable-pitch :background "dim gray" :weight bold :height 0.9))))
+ '(sr-tabs-inactive-face ((t (:inherit variable-pitch :height 0.9)))))
