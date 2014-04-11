@@ -300,7 +300,7 @@ See a pretty-printed representation of FUNCTION-NAME.
 ;;;***
 
 ;;;### (autoloads (semantic-mode semantic-default-submodes) "semantic"
-;;;;;;  "semantic.el" (21231 49823 172920 120000))
+;;;;;;  "semantic.el" (21243 24914 865220 0))
 ;;; Generated autoloads from semantic.el
 
 (defvar semantic-default-submodes '(global-semantic-idle-scheduler-mode global-semanticdb-minor-mode) "\
@@ -358,7 +358,7 @@ Semantic mode.
 
 ;;;### (autoloads nil nil ("cedet-compat.el" "cedet-cscope.el" "cedet-files.el"
 ;;;;;;  "cedet-idutils.el" "cedet.el" "pulse.el" "srecode.el" "working.el")
-;;;;;;  (21231 54422 938781 227000))
+;;;;;;  (21320 33028 220339 751000))
 
 ;;;***
 

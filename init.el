@@ -94,7 +94,6 @@
 (require 'setup-matlab)
 (require 'setup-multi-term)
 (require 'setup-smex)
-(require 'setup-sunrise-commander)
 (require 'setup-yasnippet)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
