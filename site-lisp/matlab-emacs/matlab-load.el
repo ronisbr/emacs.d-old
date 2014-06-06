@@ -149,7 +149,7 @@ Major mode for editing Tlc files, or files found in tlc directories.
 ;;;***
 
 ;;;### (autoloads nil nil ("matlab-publish.el" "semanticdb-matlab.el")
-;;;;;;  (21320 33083 157736 537000))
+;;;;;;  (21394 10003 284130 41000))
 
 ;;;***
 

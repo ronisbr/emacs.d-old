@@ -358,7 +358,7 @@ Semantic mode.
 
 ;;;### (autoloads nil nil ("cedet-compat.el" "cedet-cscope.el" "cedet-files.el"
 ;;;;;;  "cedet-idutils.el" "cedet.el" "pulse.el" "srecode.el" "working.el")
-;;;;;;  (21320 33028 220339 751000))
+;;;;;;  (21394 9950 866483 571000))
 
 ;;;***
 

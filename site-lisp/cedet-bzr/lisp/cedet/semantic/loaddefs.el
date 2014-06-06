@@ -2104,7 +2104,7 @@ Setup buffer for parse.
 ;;;;;;  "wisent/comp.el" "wisent/expr.el" "wisent/grammar-macros.el"
 ;;;;;;  "wisent/java-tags-wy.el" "wisent/java-wy.el" "wisent/java.el"
 ;;;;;;  "wisent/javascript-wy.el" "wisent/python-wy.el" "wisent/wisent.el")
-;;;;;;  (21320 33028 876530 110000))
+;;;;;;  (21394 9951 761530 342000))
 
 ;;;***
 
