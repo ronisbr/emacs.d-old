@@ -75,6 +75,7 @@
 (require 'ahei-misc)
 (require 'expand-region)
 (require 'helm-config)
+(require 'julia-mode)
 (require 'move-text)
 (require 'multiple-cursors)
 (require 'smart-forward)
