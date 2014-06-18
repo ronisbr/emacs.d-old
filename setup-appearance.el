@@ -33,6 +33,13 @@
 ;; Show line numbers
 (global-linum-mode 1)
 
+;; Improve scrolling speed.
+(setq font-lock-support-mode 'jit-lock-mode)
+(setq jit-lock-stealth-time 16
+      jit-lock-defer-contextually t
+      jit-lock-stealth-nice 0.5)
+(setq-default font-lock-multiline t)
+
 ;; org-mode colors
 (setq org-todo-keyword-faces
         '(
