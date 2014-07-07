@@ -86,7 +86,6 @@
 (require 'setup-auto-complete)
 (require 'setup-browse-kill-ring)
 (require 'setup-cc-mode)
-(require 'setup-cedet)
 (require 'setup-ecb)
 (require 'setup-ediff)
 (require 'setup-flyspell)
