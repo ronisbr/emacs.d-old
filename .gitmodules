@@ -37,3 +37,6 @@
 [submodule "site-lisp/sunrise-commander"]
 	path = site-lisp/sunrise-commander
 	url = git://github.com/escherdragon/sunrise-commander.git
+[submodule "site-lisp/company-mode"]
+	path = site-lisp/company-mode
+	url = https://github.com/company-mode/company-mode.git

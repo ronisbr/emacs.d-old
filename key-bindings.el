@@ -46,6 +46,9 @@
 ;; Sort lines: M-s l
 (global-set-key (kbd "M-s l") 'sort-lines)
 
+;; Company-mode complete: M-RET.
+(global-set-key (kbd "M-RET") 'company-complete)
+
 ;; AUCTeX TeX-complete-symbol: C-tab
 (global-set-key (kbd "C-<tab>") 'TeX-complete-symbol)
 
