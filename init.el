@@ -89,6 +89,7 @@
 (require 'setup-company)
 (require 'setup-ecb)
 (require 'setup-ediff)
+(require 'setup-flycheck)
 (require 'setup-flyspell)
 (eval-after-load 'ido '(require 'setup-ido))
 (require 'setup-magit)
