@@ -1,0 +1,12 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: @BOOK
+# expand-env: ((yas/indent-line 'fixed))
+# key: bibbook
+# --
+@BOOK{$1,
+  author = {$2},
+  title = {$3},
+  year = {$4},
+  publisher = $5,
+  address = {$6},
+}$0
