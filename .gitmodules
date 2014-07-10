@@ -43,12 +43,12 @@
 [submodule "site-lisp/flycheck"]
 	path = site-lisp/flycheck
 	url = https://github.com/flycheck/flycheck
-[submodule "site-lisp/s.el"]
-	path = site-lisp/s.el
-	url = https://github.com/magnars/s.el
-[submodule "site-lisp/dash.el"]
-	path = site-lisp/dash.el
+[submodule "site-lisp/dash"]
+	path = site-lisp/dash
 	url = https://github.com/magnars/dash.el
-[submodule "site-lisp/f.el"]
-	path = site-lisp/f.el
+[submodule "site-lisp/f"]
+	path = site-lisp/f
 	url = https://github.com/rejeep/f.el
+[submodule "site-lisp/s"]
+	path = site-lisp/s
+	url = https://github.com/magnars/s.el.git
