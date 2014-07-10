@@ -7,7 +7,6 @@
 (require 'company)
  
 (setq company-idle-delay 0.25)
-(setq company-auto-complete t)
 
 (add-hook 'after-init-hook 'global-company-mode)
 
