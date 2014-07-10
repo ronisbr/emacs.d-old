@@ -52,3 +52,6 @@
 [submodule "site-lisp/s"]
 	path = site-lisp/s
 	url = https://github.com/magnars/s.el.git
+[submodule "site-lisp/xcscope"]
+	path = site-lisp/xcscope
+	url = https://github.com/dkogan/xcscope.el.git
