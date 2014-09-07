@@ -3,14 +3,14 @@
 ;; Setup appearance.
 ;;
 
+;; Set default theme
+(load-theme 'monokai t)
+
 ;; Set default font
 (set-default-font "Monaco 9")
 
 ;; Highlight current line
 (global-hl-line-mode 1)
-
-;; Se default theme
-(load-theme 'monokai t)
 
 ;; Set font
 (setq default-frame-alist
