@@ -104,6 +104,7 @@
 (require 'setup-matlab)
 (require 'setup-multi-term)
 (require 'setup-org-mode)
+(require 'setup-powerline)
 (require 'setup-smex)
 (require 'setup-xcscope)
 (require 'setup-yasnippet)
