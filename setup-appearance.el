@@ -41,6 +41,9 @@
 ;; Show line numbers
 (global-linum-mode 1)
 
+;; Blink cursor mode
+(blink-cursor-mode t)
+
 ;; Improve scrolling speed.
 (setq font-lock-support-mode 'jit-lock-mode)
 (setq jit-lock-stealth-time 16
