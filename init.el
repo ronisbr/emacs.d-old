@@ -59,6 +59,10 @@
   (when (file-regular-p file)
     (load file)))
 
+;; Load private configurations.
+(when (file-exists-p "~/.emacs.d/private-configurations.el")
+    (load "~/.emacs.d/private-configurations.el"))
+
 ;; Setup appearance.
 (require 'setup-appearance)
 
@@ -95,6 +99,7 @@
 (require 'setup-magit)
 (require 'setup-matlab)
 (require 'setup-multi-term)
+(require 'setup-org-mode)
 (require 'setup-smex)
 (require 'setup-xcscope)
 (require 'setup-yasnippet)
@@ -119,6 +124,7 @@
  '(erc-timestamp-right-column 82)
  '(mark-even-if-inactive t)
  '(scroll-bar-mode (quote right))
+ '(send-mail-function nil)
  '(transient-mark-mode 1))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -126,6 +132,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bg:erc-color-face1 ((t (:background "black"))))
+ '(company-preview ((t (:inherit (company-tooltip)))))
+ '(company-preview-common ((t (:inherit (company-tooltip)))))
+ '(company-preview-search ((t (:inherit (company-tooltip)))))
+ '(company-scrollbar-bg ((t (:background "#000E1E"))))
+ '(company-scrollbar-fg ((t (:background "#002646"))))
+ '(company-tooltip ((t (:background "#001530" :foreground "#A5682A"))))
+ '(company-tooltip-annotation ((t (:foreground "#DFDFDF" :inherit (company-tooltip)))))
+ '(company-tooltip-common ((t (:foreground "#095242" :inherit (company-tooltip)))))
+ '(company-tooltip-common-selection ((t (:background "#191919" :foreground "#DFDFDF"))))
+ '(company-tooltip-mouse ((t (:inherit (company-tooltip-selection)))))
+ '(company-tooltip-selection ((t (:background "#A5682A" :foreground "#001530"))))
  '(erc-default-face ((t (:foreground "goldenrod"))))
  '(erc-input-face ((t (:foreground "gray"))))
  '(erc-my-nick-face ((t (:foreground "white smoke" :weight bold))))

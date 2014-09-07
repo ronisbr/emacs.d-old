@@ -40,15 +40,6 @@
       jit-lock-stealth-nice 0.5)
 (setq-default font-lock-multiline t)
 
-;; org-mode colors
-(setq org-todo-keyword-faces
-        '(
-          ("TODO"       . (:foreground "red"    :weight bold))
-          ("DONE"       . (:foreground "green"  :weight bold))
-          ("CANCELLED"  . (:foreground "black"  :background "yellow" :weight bold))
-          ("INPROGRESS" . (:foreground "yellow" :weight bold))
-         ))
-
 (when window-system
         (setq frame-title-format '(buffer-file-name "%f" ("%b")))
         (tooltip-mode -1)
