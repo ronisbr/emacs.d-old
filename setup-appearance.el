@@ -6,23 +6,31 @@
 ;; Set default font
 (set-default-font "Monaco 9")
 
-;; Background and foreground color
-(setq default-frame-alist
-      '((background-color . "#191919")
-        (foreground-color . "#DFDFDF")
-        (font . "Monaco 9")
-	(cursor-color . "#868686")))
-
 ;; Highlight current line
 (global-hl-line-mode 1)
 
+;; Se default theme
+(load-theme 'monokai t)
+
+;; Set font
+(setq default-frame-alist
+    '((font . "Monaco 9")
+      (cursor-color . "#868686")))
+
+; Background and foreground color
+;(setq default-frame-alist
+;      '((background-color . "#191919")
+;        (foreground-color . "#DFDFDF")
+;        (font . "Monaco 9")
+;	(cursor-color . "#868686")))
+;
 ;; Customize background color of lighlighted line
-(set-face-background 'hl-line "#444444")
-
+;(set-face-background 'hl-line "#444444")
+;
 ;; Customize background color of selected region
-(set-face-background 'region "#000045")
-
-(set-face-foreground 'font-lock-warning-face "#ff6666")
+;(set-face-background 'region "#000045")
+;
+;(set-face-foreground 'font-lock-warning-face "#ff6666")
 
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)

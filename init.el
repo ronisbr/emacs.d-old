@@ -21,9 +21,13 @@
 (setq site-lisp-dir
         (expand-file-name "site-lisp" user-emacs-directory))
 
+(setq themes-dir
+        (expand-file-name "themes" user-emacs-directory))
+
 ;; Set up load path.
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path site-lisp-dir)
+(add-to-list 'custom-theme-load-path themes-dir)
 
 ;; Add external projects to load path.
 (dolist (project (directory-files site-lisp-dir t "\\w+"))
@@ -109,6 +113,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-command "latex -synctex=1")
+ '(custom-safe-themes (quote ("645599a2aab022fd7677124515a3104a60ba64d2cafdd77a6e7703f8ae97250c" "c7471ce3bb42defac344b3ecfca74228731b5ab20f804fd1deb8e65dddeab26a" "7122873f9ac192e4f2cfafe1679fe6b3db658ac64593efe4bc10c52d7573c6c1" "943bff6eada8e1796f8192a7124c1129d6ff9fbd1a0aed7b57ad2bf14201fdd4" default)))
  '(delete-selection-mode nil)
  '(ecb-options-version "2.40")
  '(erc-away-timestamp-format "[%H:%M:%S] ")
@@ -131,7 +136,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(bg:erc-color-face1 ((t (:background "black"))))
+ '(bg:erc-color-face1 ((t (:background "black"))) t)
  '(company-preview ((t (:inherit (company-tooltip)))))
  '(company-preview-common ((t (:inherit (company-tooltip)))))
  '(company-preview-search ((t (:inherit (company-tooltip)))))
@@ -143,11 +148,11 @@
  '(company-tooltip-common-selection ((t (:background "#191919" :foreground "#DFDFDF"))))
  '(company-tooltip-mouse ((t (:inherit (company-tooltip-selection)))))
  '(company-tooltip-selection ((t (:background "#A5682A" :foreground "#001530"))))
- '(erc-default-face ((t (:foreground "goldenrod"))))
- '(erc-input-face ((t (:foreground "gray"))))
- '(erc-my-nick-face ((t (:foreground "white smoke" :weight bold))))
- '(sr-active-path-face ((t (:foreground "yellow" :weight bold :height 120))))
- '(sr-highlight-path-face ((t (:foreground "#ace6ac" :weight bold :height 120))))
- '(sr-passive-path-face ((t (:foreground "lightgray" :weight bold :height 120))))
- '(sr-tabs-active-face ((t (:inherit variable-pitch :background "dim gray" :weight bold :height 0.9))))
- '(sr-tabs-inactive-face ((t (:inherit variable-pitch :height 0.9)))))
+ '(erc-default-face ((t (:foreground "goldenrod"))) t)
+ '(erc-input-face ((t (:foreground "gray"))) t)
+ '(erc-my-nick-face ((t (:foreground "white smoke" :weight bold))) t)
+ '(sr-active-path-face ((t (:foreground "yellow" :weight bold :height 120))) t)
+ '(sr-highlight-path-face ((t (:foreground "#ace6ac" :weight bold :height 120))) t)
+ '(sr-passive-path-face ((t (:foreground "lightgray" :weight bold :height 120))) t)
+ '(sr-tabs-active-face ((t (:inherit variable-pitch :background "dim gray" :weight bold :height 0.9))) t)
+ '(sr-tabs-inactive-face ((t (:inherit variable-pitch :height 0.9))) t))
