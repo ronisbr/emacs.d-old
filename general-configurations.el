@@ -33,7 +33,8 @@
 (prefer-coding-system 'utf-8)
 
 ;; Remove text in active region if inserting text.
-(delete-selection-mode 1)
+(delete-selection-mode t)
+(pending-delete-mode t)
 
 ;; Always display line and column numbers.
 (setq line-number-mode t)

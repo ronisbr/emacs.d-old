@@ -115,7 +115,6 @@
  ;; If there is more than one, they won't work right.
  '(LaTeX-command "latex -synctex=1")
  '(custom-safe-themes (quote ("645599a2aab022fd7677124515a3104a60ba64d2cafdd77a6e7703f8ae97250c" "c7471ce3bb42defac344b3ecfca74228731b5ab20f804fd1deb8e65dddeab26a" "7122873f9ac192e4f2cfafe1679fe6b3db658ac64593efe4bc10c52d7573c6c1" "943bff6eada8e1796f8192a7124c1129d6ff9fbd1a0aed7b57ad2bf14201fdd4" default)))
- '(delete-selection-mode nil)
  '(ecb-options-version "2.40")
  '(erc-away-timestamp-format "[%H:%M:%S] ")
  '(erc-fill-column 80)
