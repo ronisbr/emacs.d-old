@@ -1,0 +1,10 @@
+# contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
+# name: Text and HTML email
+# key: htmlemail
+# --
+<#multipart type=alternative>
+<#part type=text/plain>
+This e-mail needs HTML support.
+<#part type=text/html>
+$0
+<#/multipart>

@@ -1,7 +1,7 @@
 # contributor: Ronan Arraes Jardim Chagas <ronisbr@gmail.com>
 # name: @ARTICLE
 # expand-env: ((yas/indent-line 'fixed))
-# key: article
+# key: bibart
 # --
 @ARTICLE{$1,
   author = {$2},
