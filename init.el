@@ -137,17 +137,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bg:erc-color-face1 ((t (:background "black"))) t)
- '(company-preview ((t (:inherit (company-tooltip)))))
- '(company-preview-common ((t (:inherit (company-tooltip)))))
- '(company-preview-search ((t (:inherit (company-tooltip)))))
- '(company-scrollbar-bg ((t (:background "#000E1E"))))
- '(company-scrollbar-fg ((t (:background "#002646"))))
- '(company-tooltip ((t (:background "#001530" :foreground "#A5682A"))))
- '(company-tooltip-annotation ((t (:foreground "#DFDFDF" :inherit (company-tooltip)))))
- '(company-tooltip-common ((t (:foreground "#095242" :inherit (company-tooltip)))))
- '(company-tooltip-common-selection ((t (:background "#191919" :foreground "#DFDFDF"))))
- '(company-tooltip-mouse ((t (:inherit (company-tooltip-selection)))))
- '(company-tooltip-selection ((t (:background "#A5682A" :foreground "#001530"))))
  '(erc-default-face ((t (:foreground "goldenrod"))) t)
  '(erc-input-face ((t (:foreground "gray"))) t)
  '(erc-my-nick-face ((t (:foreground "white smoke" :weight bold))) t)

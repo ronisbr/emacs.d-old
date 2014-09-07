@@ -17,6 +17,9 @@
     '((font . "Monaco 9")
       (cursor-color . "#868686")))
 
+;; Set the color of selected region
+(set-face-background 'region "#404040")
+
 ; Background and foreground color
 ;(setq default-frame-alist
 ;      '((background-color . "#191919")
