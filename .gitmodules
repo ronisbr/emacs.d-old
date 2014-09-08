@@ -55,3 +55,6 @@
 [submodule "site-lisp/powerline"]
 	path = site-lisp/powerline
 	url = https://github.com/milkypostman/powerline.git
+[submodule "site-lisp/undo-tree"]
+	path = site-lisp/undo-tree
+	url = http://www.dr-qubit.org/git/undo-tree.git

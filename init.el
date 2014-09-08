@@ -106,6 +106,7 @@
 (require 'setup-org-mode)
 (require 'setup-powerline)
 (require 'setup-smex)
+(require 'setup-undo-tree)
 (require 'setup-xcscope)
 (require 'setup-yasnippet)
 (custom-set-variables
