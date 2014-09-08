@@ -70,4 +70,13 @@
 ;; is actually called.
 (custom-set-variables '(LaTeX-command "latex -synctex=1") )
 
+;; Only change sectioning colour
+(setq font-latex-fontify-sectioning 'color)
+
+;; super-/sub-script on baseline
+(setq font-latex-script-display (quote (nil)))
+
+;; Don't change the font of super-/sub-script
+(setq font-latex-fontify-script nil)
+
 (provide 'setup-auctex)
