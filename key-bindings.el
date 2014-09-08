@@ -116,7 +116,7 @@
 ;; Increase number at point.
 (global-set-key (kbd "C-+") 'esk-increment-integer-at-point)
 ;; Decrease number at point.
-(global-set-key (kbd "C-_") 'esk-decrement-integer-at-point)
+(global-set-key (kbd "C--") 'esk-decrement-integer-at-point)
 
 ;; Killing text.
 (global-set-key (kbd "C-S-k") 'kill-and-retry-line)
