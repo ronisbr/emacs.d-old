@@ -126,4 +126,7 @@
 ;; Toggle two most recent buffers.
 (global-set-key (kbd "s-j") 'quick-switch-buffer)
 
+;; Goto line (with feedback).
+(global-set-key (kbd "C-c C-g") 'goto-line-with-feedback)
+
 (provide 'key-bindings)
