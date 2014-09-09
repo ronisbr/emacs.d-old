@@ -41,9 +41,6 @@
 ;; Enable visual line mode (break long lines)
 (global-visual-line-mode t)
 
-;; Show line numbers
-(global-linum-mode 1)
-
 ;; Blink cursor mode
 (blink-cursor-mode t)
 
