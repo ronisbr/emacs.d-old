@@ -4,6 +4,26 @@
 ;;
 ;; WARNING: it requires clang for C++ completion.
 
+(defun tab-indent-or-complete ()
+  (interactive)
+  (defun check-expansion ()
+    (save-excursion
+      (if (looking-at "\\_>") t
+          (progn (backward-char 1)
+                 (if (looking-at "\\.") t
+                     (progn (backward-char 1)
+                            (if (looking-at "->") t nil)))))))
+  (defun do-yas-expand ()
+    (let ((yas/fallback-behavior 'return-nil))
+      (yas/expand)))
+  (if (minibufferp)
+      (minibuffer-complete)
+      (if (or (not yas/minor-mode)
+              (null (do-yas-expand)))
+          (if (check-expansion)
+              (company-complete-common)
+              (indent-for-tab-command)))))
+
 (require 'company)
  
 (setq company-idle-delay 0.25)
