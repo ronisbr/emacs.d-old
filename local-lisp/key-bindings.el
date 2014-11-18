@@ -136,4 +136,13 @@
 ;; TAB
 (global-set-key [tab] 'tab-indent-or-complete)
 
+;; Eval-and-replace
+(global-set-key (kbd "C-c C-e") 'eval-and-replace)
+
+;; Open new lines
+(global-set-key (kbd "C-o") 'open-line-and-indent)
+(global-set-key (kbd "<C-return>") 'open-line-below)
+(global-set-key (kbd "<C-S-return>") 'open-line-above)
+(global-set-key (kbd "<s-return>") 'new-line-in-between)
+
 (provide 'key-bindings)

@@ -46,6 +46,22 @@ If there's no region, the current line will be duplicated."
             (dotimes (i num)
             (insert region))))
 
+(defun eval-and-replace ()
+    "Replace the preceding sexp with its value."
+    (interactive)
+    (backward-kill-sexp)
+    (condition-case nil
+        (prin1 (eval (read (current-kill 0)))
+               (current-buffer))
+        (error (message "Invalid expression")
+               (insert (current-kill 0)))))
+
+(defun eval-and-replace (value)
+    "Evaluate the sexp at point and replace it with its value"
+    (interactive (list (eval-last-sexp nil)))
+    (kill-sexp -1)
+    (insert (format "%S" value)))
+
 (defun kill-and-retry-line ()
     "Kill the entire current line and reposition point at indentation"
     (interactive)
@@ -63,6 +79,37 @@ If there's no region, the current line will be duplicated."
     (interactive)
     (kill-region (save-excursion (beginning-of-line) (point))
                  (point)))
+
+(defun open-line-below ()
+    "Open a new line below of the current one."
+    (interactive)
+    (end-of-line)
+    (newline)
+    (indent-for-tab-command))
+
+(defun open-line-above ()
+    "Open a new line above of the current one."
+    (interactive)
+    (beginning-of-line)
+    (newline)
+    (forward-line -1)
+    (indent-for-tab-command))
+
+(defun open-line-and-indent ()
+    "Open a new line and indent. The cursor will not move."
+    (interactive)
+    (newline-and-indent)
+    (end-of-line 0)
+    (indent-for-tab-command))
+
+(defun new-line-in-between ()
+    "Break a line and add a new one between the two parts."
+    (interactive)
+    (newline)
+    (save-excursion
+      (newline)
+      (indent-for-tab-command))
+    (indent-for-tab-command))
 
 (defun save-region-or-current-line (arg)
     (interactive "P")
