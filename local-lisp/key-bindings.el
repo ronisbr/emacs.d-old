@@ -56,6 +56,10 @@
 ;; Key bindings related to extensions.
 ;; ----------------------------------------------------------------------------
 
+;; Ace jump
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
+(global-set-key (kbd "C-c C-SPC") 'ace-jump-mode-pop-mark)
+
 ;; browse-kill-ring: C-x C-y
 (global-set-key (kbd "C-x C-y") 'browse-kill-ring)
 
