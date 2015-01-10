@@ -139,7 +139,8 @@ This function provides equivalent functionality, but makes no efforts to optimis
 ].* \\(in\\)\\(\\s-\\|$\\)+")
 
 (defconst julia-function-regex
-  (rx line-start symbol-start "function"
+  (rx line-start (* (or space "@inline" "@noinline")) symbol-start
+      (or "function" "stagedfunction")
       (1+ space)
       ;; Don't highlight module names in function declarations:
       (* (seq (1+ (or word (syntax symbol))) "."))
@@ -147,26 +148,31 @@ This function provides equivalent functionality, but makes no efforts to optimis
       (group (1+ (or word (syntax symbol))))))
 
 (defconst julia-function-assignment-regex
-  (rx line-start symbol-start
+  (rx line-start (* (or space "@inline" "@noinline")) symbol-start
+      (* (seq (1+ (or word (syntax symbol))) ".")) ; module name
       (group (1+ (or word (syntax symbol))))
       (* space)
       (? "{" (* (not (any "}"))) "}")
       (* space)
-      "(" (* (not (any ")"))) ")"
+      "(" (* (or
+              (seq "(" (* (not (any "(" ")"))) ")")
+              (not (any "(" ")"))))
+      ")"
       (* space)
-      "="))
+      "="
+      (not (any "="))))
 
 (defconst julia-type-regex
   (rx symbol-start (or "immutable" "type" "abstract") (1+ space) (group (1+ (or word (syntax symbol))))))
 
 (defconst julia-type-annotation-regex
-  (rx "::" (group (1+ (or word (syntax symbol))))))
+  (rx "::" (0+ space) (group (1+ (or word (syntax symbol))))))
 
 ;;(defconst julia-type-parameter-regex
 ;;  (rx symbol-start (1+ (or (or word (syntax symbol)) ?_)) "{" (group (1+ (or (or word (syntax symbol)) ?_))) "}"))
 
 (defconst julia-subtype-regex
-  (rx "<:" (1+ space) (group (1+ (or word (syntax symbol)))) (0+ space) (or "\n" "{" "end")))
+  (rx "<:" (0+ space) (group (1+ (or word (syntax symbol)))) (0+ space) (or "\n" "{" "}" "end")))
 
 (defconst julia-macro-regex
   (rx symbol-start (group "@" (1+ (or word (syntax symbol))))))
@@ -174,7 +180,7 @@ This function provides equivalent functionality, but makes no efforts to optimis
 (defconst julia-keyword-regex
   (julia--regexp-opt
    '("if" "else" "elseif" "while" "for" "begin" "end" "quote"
-     "try" "catch" "return" "local" "abstract" "function" "macro" "ccall"
+     "try" "catch" "return" "local" "abstract" "function" "stagedfunction" "macro" "ccall"
      "finally" "typealias" "break" "continue" "type" "global"
      "module" "using" "import" "export" "const" "let" "bitstype" "do" "in"
      "baremodule" "importall" "immutable")
@@ -192,18 +198,23 @@ This function provides equivalent functionality, but makes no efforts to optimis
      "UInt" "UInt8" "UInt16" "UInt32" "UInt64" "UInt128"
      "Int" "Int8" "Int16" "Int32" "Int64" "Int128"
      "BigFloat" "FloatingPoint" "Float16" "Float32" "Float64"
-     "Complex128" "Complex64" "ComplexPair"
+     "Complex128" "Complex64"
      "Bool"
+     "Cuchar" "Cshort" "Cushort" "Cint" "Cuint" "Clonglong" "Culonglong" "Cintmax_t" "Cuintmax_t"
+     "Cfloat" "Cdouble" "Cptrdiff_t" "Cssize_t" "Csize_t"
+     "Cchar" "Clong" "Culong" "Cwchar_t"
      "Char" "ASCIIString" "UTF8String" "ByteString" "SubString"
-     "Array" "DArray" "AbstractArray" "AbstractVector" "AbstractMatrix" "AbstractSparseMatrix" "SubArray" "StridedArray" "StridedVector" "StridedMatrix" "VecOrMat" "StridedVecOrMat" "DenseArray" "SparseMatrixCSC"
-     "Range" "Range1" "OrdinalRange" "StepRange" "UnitRange" "FloatRange"
+     "Array" "DArray" "AbstractArray" "AbstractVector" "AbstractMatrix" "AbstractSparseMatrix" "SubArray" "StridedArray" "StridedVector" "StridedMatrix" "VecOrMat" "StridedVecOrMat" "DenseArray" "SparseMatrixCSC" "BitArray"
+     "Range" "OrdinalRange" "StepRange" "UnitRange" "FloatRange"
      "Tuple" "NTuple"
-     "DataType" "Symbol" "Function" "Vector" "Matrix" "Union" "Type" "Any" "Complex" "None" "String" "Ptr" "Void" "Exception" "Task" "Signed" "Unsigned" "Associative" "Dict" "IO" "IOStream" "Ranges" "Rational" "Regex" "RegexMatch" "Set" "IntSet" "Expr" "WeakRef" "Nothing" "ObjectIdDict")
+     "DataType" "Symbol" "Function" "Vector" "Matrix" "Union" "Type" "Any" "Complex" "String" "Ptr" "Void" "Exception" "Task" "Signed" "Unsigned" "Associative" "Dict" "IO" "IOStream" "Rational" "Regex" "RegexMatch" "Set" "IntSet" "Expr" "WeakRef" "ObjectIdDict"
+     "AbstractRNG" "MersenneTwister"
+     )
    'symbols))
 
 (defconst julia-quoted-symbol-regex
   ;; :foo and :foo2 are valid, but :123 is not.
-  (rx (or whitespace "(" "[" ",")
+  (rx (or whitespace "(" "[" "," "=")
       (group ":" (or letter (syntax symbol)) (0+ (or word (syntax symbol))))))
 
 (defconst julia-font-lock-keywords
@@ -234,7 +245,7 @@ This function provides equivalent functionality, but makes no efforts to optimis
    ))
 
 (defconst julia-block-start-keywords
-  (list "if" "while" "for" "begin" "try" "function" "type" "let" "macro"
+  (list "if" "while" "for" "begin" "try" "function" "stagedfunction" "type" "let" "macro"
 	"quote" "do" "immutable"))
 
 (defconst julia-block-end-keywords
@@ -267,7 +278,7 @@ As a result, it is true inside \"foo\", `foo` and 'f'."
             (incf open-count))
           (when (looking-at (rx "]"))
             (decf open-count)))
-        
+
         (forward-char 1)))
 
     ;; If we've opened more than we've closed, we're inside brackets.
@@ -313,6 +324,8 @@ Do not move back beyond position MIN."
 (defun julia-last-open-block (min)
   "Move back and return indentation level for last open block.
 Do not move back beyond MIN."
+  ;; Ensure MIN is not before the start of the buffer.
+  (setq min (max min (point-min)))
   (let ((pos (julia-last-open-block-pos min)))
     (and pos
 	 (progn
@@ -325,12 +338,26 @@ beginning of the buffer."
   (unless (eq (point) (point-min))
     (backward-char)))
 
+(defvar julia-max-paren-lookback 400
+  "When indenting, don't look back more than this
+many characters to see if there are unclosed parens.
+
+This variable has a major effect on indent performance if set too
+high.")
+
+(defvar julia-max-block-lookback 5000
+  "When indenting, don't look back more than this
+many characters to see if there are unclosed blocks.
+
+This variable has a moderate effect on indent performance if set too
+high.")
+
 (defun julia-paren-indent ()
   "Return the column position of the innermost containing paren
 before point. Returns nil if we're not within nested parens."
   (save-excursion
-    (let ((min-pos (or (julia-last-open-block-pos (point-min))
-                       (point-min)))
+    (let ((min-pos (max (- (point) julia-max-paren-lookback)
+                        (point-min)))
           (open-count 0))
       (while (and (> (point) min-pos)
                   (not (plusp open-count)))
@@ -374,7 +401,7 @@ before point. Returns nil if we're not within nested parens."
         (beginning-of-line)
         (forward-to-indentation 0)
         (let ((endtok (julia-at-keyword julia-block-end-keywords)))
-          (ignore-errors (+ (julia-last-open-block (point-min))
+          (ignore-errors (+ (julia-last-open-block (- (point) julia-max-block-lookback))
                             (if endtok (- julia-basic-offset) 0)))))
       ;; Otherwise, use the same indentation as previous line.
       (save-excursion (forward-line -1)
@@ -384,6 +411,136 @@ before point. Returns nil if we're not within nested parens."
     ;; to its original position (relative to indentation).
     (when (>= point-offset 0)
       (move-to-column (+ (current-indentation) point-offset)))))
+
+;; Emacs 23.X doesn't include ert, so we ignore any errors that occur
+;; when we define tests.
+(ignore-errors
+  (require 'ert)
+
+  (defmacro julia--should-indent (from to)
+    "Assert that we indent text FROM producing text TO in `julia-mode'."
+    `(with-temp-buffer
+       (julia-mode)
+       (insert ,from)
+       (indent-region (point-min) (point-max))
+       (should (equal (buffer-substring-no-properties (point-min) (point-max))
+                      ,to))))
+
+  (ert-deftest julia--test-indent-if ()
+    "We should indent inside if bodies."
+    (julia--should-indent
+     "
+if foo
+bar
+end"
+     "
+if foo
+    bar
+end"))
+
+  (ert-deftest julia--test-indent-else ()
+    "We should indent inside else bodies."
+    (julia--should-indent
+     "
+if foo
+    bar
+else
+baz
+end"
+     "
+if foo
+    bar
+else
+    baz
+end"))
+
+  (ert-deftest julia--test-indent-toplevel ()
+    "We should not indent toplevel expressions. "
+    (julia--should-indent
+     "
+foo()
+bar()"
+     "
+foo()
+bar()"))
+
+  (ert-deftest julia--test-indent-nested-if ()
+    "We should indent for each level of indentation."
+    (julia--should-indent
+     "
+if foo
+    if bar
+bar
+    end
+end"
+     "
+if foo
+    if bar
+        bar
+    end
+end"))
+
+  (ert-deftest julia--test-indent-function ()
+    "We should indent function bodies."
+    (julia--should-indent
+     "
+function foo()
+bar
+end"
+     "
+function foo()
+    bar
+end"))
+
+  (ert-deftest julia--test-indent-begin ()
+    "We should indent after a begin keyword."
+    (julia--should-indent
+     "
+@async begin
+bar
+end"
+     "
+@async begin
+    bar
+end"))
+
+  (ert-deftest julia--test-indent-paren ()
+    "We should indent to line up with open parens."
+    (julia--should-indent
+     "
+foobar(bar,
+baz)"
+     "
+foobar(bar,
+       baz)"))
+
+  (ert-deftest julia--test-indent-equals ()
+    "We should increase indent on a trailing =."
+    (julia--should-indent
+     "
+foo() =
+bar"
+     "
+foo() =
+    bar"))
+
+  (ert-deftest julia--test-indent-ignores-blank-lines ()
+    "Blank lines should not affect indentation of non-blank lines."
+    (julia--should-indent
+     "
+if foo
+        
+bar
+end"
+     "
+if foo
+    
+    bar
+end"))
+
+  (defun julia--run-tests ()
+    (interactive)
+    (ert-run-tests-interactively "julia--test")))
 
 (defalias 'julia-mode-prog-mode
   (if (fboundp 'prog-mode)
