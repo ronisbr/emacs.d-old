@@ -113,6 +113,7 @@
 (require 'setup-multi-term)
 (require 'setup-org-mode)
 (require 'setup-powerline)
+(require 'setup-rainbow-delimiters)
 (require 'setup-smex)
 (require 'setup-undo-tree)
 (require 'setup-xcscope)
