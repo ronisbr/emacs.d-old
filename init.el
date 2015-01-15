@@ -97,6 +97,7 @@
 
 ;; Setups.
 (require 'setup-ace-jump-mode)
+(require 'setup-anzu)
 (require 'setup-auctex)
 (require 'setup-auto-complete)
 (require 'setup-browse-kill-ring)

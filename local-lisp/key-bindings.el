@@ -60,6 +60,10 @@
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-c C-SPC") 'ace-jump-mode-pop-mark)
 
+;; Anzu
+(global-set-key (kbd "M-%") 'anzu-query-replace)
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
+
 ;; browse-kill-ring: C-x C-y
 (global-set-key (kbd "C-x C-y") 'browse-kill-ring)
 
