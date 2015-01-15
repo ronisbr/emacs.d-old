@@ -70,6 +70,10 @@
 ;; expand-region: C-'
 (global-set-key (kbd "C-'") 'er/expand-region)
 
+;; Fiplr
+(global-set-key (kbd "C-c f") 'fiplr-find-file)
+(global-set-key (kbd "C-c C-c f") 'fiplr-find-directory)
+
 ;; helm
 (global-set-key (kbd "<f6>") 'helm-mini)
 

@@ -89,6 +89,7 @@
 ;; Extensions.
 (require 'ahei-misc)
 (require 'expand-region)
+(require 'fiplr)
 (require 'helm-config)
 (require 'julia-mode)
 (require 'move-text)
