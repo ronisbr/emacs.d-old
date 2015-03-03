@@ -117,6 +117,7 @@
 (require 'setup-powerline)
 (require 'setup-rainbow-delimiters)
 (require 'setup-smex)
+(require 'setup-sr-speedbar)
 (require 'setup-undo-tree)
 (require 'setup-xcscope)
 (require 'setup-yasnippet)
