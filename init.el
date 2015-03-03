@@ -112,6 +112,7 @@
 (require 'setup-magit)
 (require 'setup-matlab)
 (require 'setup-multi-term)
+(require 'setup-neotree)
 (require 'setup-org-mode)
 (require 'setup-powerline)
 (require 'setup-rainbow-delimiters)
