@@ -3,7 +3,7 @@
 cd site-lisp/
 
 # List of package to be compiled.
-PACKAGES=(auto-complete company-mode ecb ESS git-modes helm magit matlab-emacs)
+PACKAGES=(auto-complete back-button company-mode ecb ESS git-modes helm magit matlab-emacs)
 
 # Compile packages.
 for package in ${PACKAGES[*]}
