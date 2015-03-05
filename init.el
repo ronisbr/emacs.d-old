@@ -100,7 +100,6 @@
 (require 'setup-anzu)
 (require 'setup-auctex)
 (require 'setup-auto-complete)
-(require 'setup-back-button)
 (require 'setup-browse-kill-ring)
 (require 'setup-cc-mode)
 (require 'setup-company)
