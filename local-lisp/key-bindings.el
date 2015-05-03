@@ -52,6 +52,9 @@
 ;; AUCTeX TeX-complete-symbol: C-tab
 (global-set-key (kbd "C-<tab>") 'TeX-complete-symbol)
 
+;; Change key-binding for `just-one-space` to avoid conflict with Plasma 5.3
+(global-set-key (kbd "s-SPC") 'just-one-space)
+
 ;; ----------------------------------------------------------------------------
 ;; Key bindings related to extensions.
 ;; ----------------------------------------------------------------------------
