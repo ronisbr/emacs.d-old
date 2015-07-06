@@ -6,15 +6,12 @@
 ;; Set default theme
 (load-theme 'monokai t)
 
-;; Set default font
-(set-default-font "Monaco 9")
-
 ;; Highlight current line
 (global-hl-line-mode 1)
 
 ;; Set font
 (setq default-frame-alist
-    '((font . "Monaco 9")
+    '((font . "Monaco 11")
       (cursor-color . "#868686")))
 
 ; Background and foreground color
