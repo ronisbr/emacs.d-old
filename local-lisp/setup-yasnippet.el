@@ -18,4 +18,10 @@
 
 (yas-global-mode 1)
 
+;; Set C-TAB to yas-expand to avoid conflicts
+
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
+
 (provide 'setup-yasnippet)

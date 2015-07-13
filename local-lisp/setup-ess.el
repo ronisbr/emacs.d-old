@@ -9,6 +9,11 @@
 
 (add-to-list 'load-path ess-lisp-dir)
 
+(add-hook 'ess-mode-hook
+ '(lambda()
+    (local-set-key (kbd "<tab>") 'ess-indent-or-complete)
+    ))
+
 (require 'ess-site)
 
 ;; Configure julia

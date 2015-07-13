@@ -144,9 +144,6 @@
 ;; Goto line (with feedback).
 (global-set-key (kbd "C-c C-g") 'goto-line-with-feedback)
 
-;; TAB
-(global-set-key [tab] 'tab-indent-or-complete)
-
 ;; Eval-and-replace
 (global-set-key (kbd "C-c C-e") 'eval-and-replace)
 
